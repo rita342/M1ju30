@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<!--
+        BINGO CHALLENGE!!!
+        Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
+        Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
+
+        EXTRA: 
+        - Take ALWAYS a new number (eg. avoid randoming the number 10 3 times)
+        - Create a USER BOARD with 24 randomized numbers that highlights as the main board does
+        - Let the user choose HOW MANY user boards he's willing to play with and create them.
+    -->
+<style>
+    body {
+        background-color: rgb(163, 204, 228);
+        color: rgb(46, 45, 49);
+        max-width: 768px;
+        max-width: 1280px;
+        margin: 0 auto;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    
+    table {
+        border-style: solid;
+        border-width: 3px;
+        border-color: #faf4f4;
+        border-radius: 8px;
+        width: 60%;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    .orange {
+        border-style: solid;
+        border-width: 4px;
+        border-color: #4a4a4a;
+    }
+    
+    .selected {
+        border-color: rgb(243, 114, 114);
+        background-color: rgb(184, 180, 180);
+    }
+    
+    h1 {
+        color: black;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+</style>
+
+<head>
+    <h1> BINGO CHALLENGE!!!</h1>
+</head>
+
+<body>
+    <table class="cardboard">
+        <tr>
+            <th class="orange">1</th>
+            <th class="orange">2</th>
+            <th class="orange">3</th>
+            <th class="orange">4</th>
+            <th class="orange">5</th>
+            <th class="orange">6</th>
+            <th class="orange">7</th>
+            <th class="orange">8</th>
+            <th class="orange">8</th>
+            <th class="orange">10</th>
+            <th class="orange">11</th>
+            <th class="orange">12</th>
+            <th class="orange">13</th>
+            <th class="orange">14</th>
+            <th class="orange">15</th>
+            <th class="orange">16</th>
+            <th class="orange">17</th>
+            <th class="orange">18</th>
+            <th class="orange">19</th>
+        </tr>
+        <tr>
+            <th class="orange">20</th>
+            <th class="orange">21</th>
+            <th class="orange">22</th>
+            <th class="orange">23</th>
+            <th class="orange">24</th>
+            <th class="orange">25</th>
+            <th class="orange">26</th>
+            <th class="orange">27</th>
+            <th class="orange">28</th>
+            <th class="orange">29</th>
+            <th class="orange">30</th>
+            <th class="orange">31</th>
+            <th class="orange">32</th>
+            <th class="orange">33</th>
+            <th class="orange">34</th>
+            <th class="orange">35</th>
+            <th class="orange">36</th>
+            <th class="orange">37</th>
+            <th class="orange">38</th>
+        </tr>
+        <tr>
+            <th class="orange">39</th>
+            <th class="orange">40</th>
+            <th class="orange">41</th>
+            <th class="orange">42</th>
+            <th class="orange">43</th>
+            <th class="orange">44</th>
+            <th class="orange">45</th>
+            <th class="orange">46</th>
+            <th class="orange">47</th>
+            <th class="orange">48</th>
+            <th class="orange">49</th>
+            <th class="orange">50</th>
+            <th class="orange">51</th>
+            <th class="orange">52</th>
+            <th class="orange">53</th>
+            <th class="orange">54</th>
+            <th class="orange">55</th>
+            <th class="orange">56</th>
+            <th class="orange">57</th>
+        </tr>
+        <tr>
+            <th class="orange">58</th>
+            <th class="orange">59</th>
+            <th class="orange">60</th>
+            <th class="orange">61</th>
+            <th class="orange">62</th>
+            <th class="orange">63</th>
+            <th class="orange">64</th>
+            <th class="orange">65</th>
+            <th class="orange">66</th>
+            <th class="orange">67</th>
+            <th class="orange">68</th>
+            <th class="orange">69</th>
+            <th class="orange">70</th>
+            <th class="orange">71</th>
+            <th class="orange">72</th>
+            <th class="orange">73</th>
+            <th class="orange">74</th>
+            <th class="orange">75</th>
+            <th class="orange">76</th>
+        </tr>
+    </table>
+    <div id="numbers">
+        <br>
+        <button onclick="myFunction()">choose the number</button>
+
+    </div>
+</body>
+<script>
+    function myFunction(min, max) {
+
+        return Math.random() * (max - min) + min;
+    }
+
+    document.write(myfunction(1, 76));
+    console.log(myFunction(1, 76))
+
+    const clickednumberNode = event.currentTarget
+    clickednumberNode.classList.add("selected")
+</script>
+
+</html>
